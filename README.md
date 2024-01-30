@@ -1,37 +1,37 @@
-│   manage.py
-│   __init__.py
-│
-├───telemetry_db
-│   │   admin.py
-│   │   apps.py
-│   │   models.py
-│   │   tests.py
-│   │   urls.py
-│   │   __init__.py
-│   │
-│   │
-│   ├───management
-│   │   └───commands
-│   │       │   migrate_memory_data.py
-│   │       │   migrate_mesh_data.py
-│   │
-│   │
-│   ├───serializers
-│   │       memory_dump_serializers.py
-│   │       mesh_dump_serializers.py
-│   │       __init__.py
-│   │   
-│   │   
-│   ├───views
-│       │   memory_dump_views.py
-│       │   mesh_dump_views.py
-│       │   __init__.py
-│       
-│       
-│
-└───telemetry_store
-        asgi.py
-        settings.py
-        urls.py
-        wsgi.py
-        __init__.py
+│   manage.py<br>
+│   __init__.py<br>
+│<br>
+├───telemetry_db<br>
+│   │   admin.py<br>
+│   │   apps.py<br>
+│   │   models.py<br>
+│   │   tests.py<br>
+│   │   urls.py<br>
+│   │   __init__.py<br>
+│   │<br>
+│   │<br>
+│   ├───management<br>
+│   │   └───commands<br>
+│   │       │   migrate_memory_data.py<br>
+│   │       │   migrate_mesh_data.py<br>
+│   │<br>
+│   │<br>
+│   ├───serializers<br>
+│   │       memory_dump_serializers.py<br>
+│   │       mesh_dump_serializers.py<br>
+│   │       __init__.py<br>
+│   │   <br>
+│   │   <br>
+│   ├───views<br>
+│       │   memory_dump_views.py<br>
+│       │   mesh_dump_views.py<br>
+│       │   __init__.py<br>
+│       <br>
+│       <br>
+│<br>
+└───telemetry_store<br>
+        asgi.py<br>
+        settings.py<br>
+        urls.py<br>
+        wsgi.py<br>
+        __init__.py<br>
