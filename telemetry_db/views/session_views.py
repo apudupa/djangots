@@ -1,6 +1,6 @@
 from rest_framework import generics, filters
-from telemetry_db.models import TestRun
-from telemetry_db.serializers.session_serializers import TestRunSerializer
+from telemetry_db.models import TestRun, Build
+from telemetry_db.serializers.session_serializers import TestRunSerializer, BuildSerializer
 
 class SessionListView(generics.ListAPIView):
     queryset = TestRun.objects.all()
@@ -19,3 +19,8 @@ class SessionListView(generics.ListAPIView):
         if platform is not None:
             queryset = queryset.filter(platform__name=platform)
         return queryset
+
+
+class BuildListView(generics.ListAPIView):
+    queryset = Build.objects.all()
+    serializer_class = BuildSerializer

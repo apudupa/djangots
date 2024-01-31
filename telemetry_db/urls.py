@@ -1,6 +1,8 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import MemoryDumpViewSet, memdump_data, allocation_diff, MeshMemoryTableView, BuildsWithMeshDataView, MeshMemoryGrowthView, MeshListDifferenceView, DirectoryMeshMemoryGrowthView, MeshCountsView, MeshHistoryView
+from .views import SessionListView, BuildListView, MemoryDumpViewSet, memdump_data, allocation_diff
+from .views import MeshMemoryTableView, BuildsWithMeshDataView, MeshMemoryGrowthView, MeshListDifferenceView
+from .views import DirectoryMeshMemoryGrowthView, MeshCountsView, MeshHistoryView
 
 router = DefaultRouter()
 router.register(r'memorydumps', MemoryDumpViewSet)
@@ -16,4 +18,6 @@ urlpatterns = [
     path('mesh-counts/', MeshCountsView.as_view(), name='mesh-counts'),
     path('directory-mesh-memory-growth/<str:dir_name>/<int:location_id>/', DirectoryMeshMemoryGrowthView.as_view(), name='directory-mesh-memory-growth'),
     path('mesh/<str:mesh_name>/history/', MeshHistoryView.as_view(), name='mesh-history'),
+    path('sessions/', SessionListView.as_view(), name='session-list'),
+    path('builds/', BuildListView.as_view(), name='build-list'),
 ]
